@@ -1,6 +1,6 @@
 # deepseek-docRAG
 
-The `deepseek-docRAG` project is designed to test the reasoning capabilities of the `deepseek-r1` models for Retrieval-Augmented Generation (RAG) applications. This project leverages the LangChain framework to facilitate document processing and question-answering tasks using PDF documents.
+The `deepseek-docRAG` project is designed to test the reasoning capabilities of the `deepseek-r1` models for Retrieval-Augmented Generation (RAG) applications. This project leverages the LangChain framework to facilitate document processing and question-answering tasks using PDF documents. The model is run locally using Ollama. More information about the models can be found [here](https://ollama.com/library/deepseek-r1). Please change the `model_name` based on the local compute of your system.
 
 ## Installation
 
