@@ -34,27 +34,23 @@ To get started, follow these steps:
 
 ### main.py
 
-- **Imports**: The script begins by importing necessary libraries from LangChain and other modules, including `OllamaEmbeddings`, `OllamaLLM`, and `PDFPlumberLoader`, among others.
+- **Imports**: Essential libraries from LangChain and modules for embeddings, language models, and PDF loading.
 
-- **Template Definition**: A prompt template is defined for the question-answering task. It instructs the model on how to respond based on the retrieved context.
+- **Template**: A prompt template for the question-answering task.
 
-- **PDF Directory**: The directory for storing uploaded PDF files is specified as `pdf_dir`.
+- **PDF Directory**: Specifies where uploaded PDF files are stored.
 
-- **Model Initialization**: The `deepseek-r1:8b` model is initialized for both embeddings and language model tasks.
+- **Model Initialization**: Initializes the `deepseek-r1:8b` model for embeddings and language tasks.
 
-- **PDF Upload Function**: The `upload_pdf` function handles the uploading of PDF files, saving them to the specified directory.
+- **Functions**:
+  - `upload_pdf`: Handles PDF file uploads.
+  - `load_pdf`: Loads content from PDF files.
+  - `split_text`: Breaks documents into manageable chunks.
+  - `index_docs`: Adds documents to the vector store for retrieval.
+  - `retrieve_docs`: Performs similarity searches based on user queries.
+  - `answer_question`: Constructs prompts and generates answers, extracting content from `<think>` tags.
 
-- **PDF Loading Function**: The `load_pdf` function uses `PDFPlumberLoader` to load the content of the uploaded PDF files into a format suitable for processing.
-
-- **Text Splitting Function**: The `split_text` function utilizes `RecursiveCharacterTextSplitter` to break down the loaded documents into manageable chunks for better processing.
-
-- **Indexing Documents**: The `index_docs` function adds the split documents to the in-memory vector store for efficient retrieval.
-
-- **Document Retrieval**: The `retrieve_docs` function performs a similarity search in the vector store based on the user's query.
-
-- **Answering Questions**: The `answer_question` function constructs a prompt using the retrieved context and invokes the model to generate an answer. It also extracts any content enclosed within `<think>` tags from the model's response.
-
-- **Streamlit File Uploader**: The application provides a file uploader for users to upload PDF documents, which will then be processed and used for question-answering.
+- **Streamlit Integration**: Provides a file uploader for user interaction.
 
 ## Usage
 1. **Upload a PDF Document**: Use the provided interface to upload a PDF document.
